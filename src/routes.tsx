@@ -4,6 +4,7 @@ import TaskDetail from "./components/tasks/TaskDetail";
 import TaskForm from "./components/tasks/TaskForm";
 import Homepage from "./pages/Homepage";
 import ProtectedRoute from "./components/ProtectedRoute";
+import CallbackPage from "./pages/CallbackPage";
 
 export const router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Homepage />,
+            },
+            {
+                path: "/callback",
+                element: <CallbackPage />,
             },
             {
                 path: "/protected",

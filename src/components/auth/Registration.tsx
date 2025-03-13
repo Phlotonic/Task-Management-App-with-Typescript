@@ -15,8 +15,7 @@ const Registration: React.FC = () => {
   const handleGoogleRegistration = () => {
     loginWithRedirect({
         authorizationParams: {
-            connection: 'google-oauth2', 
-            screen_hint: 'signup',
+            connection: 'google-oauth2',
         }
     });
   };

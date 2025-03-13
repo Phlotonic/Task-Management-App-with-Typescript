@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { Container, Col } from "react-bootstrap";
-import NavBar from "./NavBar";
+import NavBar from "../ui/NavBar";
 const CallbackPage:React.FC = () =>{
     const { error, user }= useAuth0();
     if(error){
