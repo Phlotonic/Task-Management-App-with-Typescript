@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavLink } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavLink, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Logout from './auth/Logout';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -20,6 +20,9 @@ const NavBar: React.FC = () => {
               </>
             )}
           </Nav>
+          {!isAuthenticated && (
+            <Button as={Link} to="/">Login</Button>
+          )}
           <Nav>
             {isAuthenticated && <Logout />}
           </Nav>

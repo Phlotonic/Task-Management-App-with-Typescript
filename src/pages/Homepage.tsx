@@ -3,9 +3,14 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Registration from '../components/auth/Registration';
 import Logout from '../components/auth/Logout';
 import Login from '../components/auth/Login';
+import TaskDashboard from './TaskDashboard';
 
 const Homepage: React.FC = () => {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, isLoading } = useAuth0(); // Added isLoading
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Handle loading state
+  }
 
   return (
     <div>
@@ -17,7 +22,10 @@ const Homepage: React.FC = () => {
         </>
       )}
       {isAuthenticated && (
-       <Logout />
+        <>
+          <TaskDashboard />
+          <Logout />
+        </>
       )}
     </div>
   );

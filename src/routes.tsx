@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import TaskDashboard from "./components/tasks/TaskDashboard";
+import TaskDashboard from "./pages/TaskDashboard";
 import TaskDetail from "./components/tasks/TaskDetail";
 import TaskForm from "./components/tasks/TaskForm";
 import Homepage from "./pages/Homepage";
