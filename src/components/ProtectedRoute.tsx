@@ -6,11 +6,13 @@ const ProtectedRoute: React.FC = () => {
     const { isAuthenticated, isLoading } = useAuth0();
     const location = useLocation();
 
+console.log("isAuthenticated", isAuthenticated);
+
     if (isLoading) {
         return <div>Loading...</div>;
     }
 
-    return isAuthenticated ? <Outlet /> : <Navigate to="/" state={{ from: location }} replace />;
+    return isAuthenticated ? <Outlet /> : <Navigate to="/callback" replace />;
 };
 
 export default ProtectedRoute;

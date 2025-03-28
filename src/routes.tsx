@@ -32,13 +32,13 @@ export const router = createBrowserRouter([
                         element: <TaskForm />,
                     },
                     {
-                        path: "tasks/:id",
-                        element: <TaskDetail task={undefined} />,
+                        path: "tasks/details/:id",
+                        element: <TaskDetail />,
                     },
-                    {
-                        path: "tasks/edit/:id",
-                        element: <TaskForm />,
-                    },
+                    // {
+                    //     path: "tasks/edit/:id",
+                    //     element: <TaskForm />,
+                    // },
                 ],
             },
         ],
